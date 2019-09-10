@@ -14,6 +14,10 @@ public class TicketOffice {
 		
 	}
 	
+	public void sellTicketTo(Audience audience) {
+		plusAmount(audience.buy(getTicket()));
+	}
+	
 	//컬렉션에서 맨 첫번째 위치에 저장된 ticket을 반환함
 	public Ticket getTicket() {
 		return tickets.remove(0);
